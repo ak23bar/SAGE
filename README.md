@@ -2,7 +2,17 @@
 
 SAGE connects reviewed project context to a bounded task, a deterministic decision, an executor and a durable receipt. The personal alpha starts with one workflow: turn a SEEM packet into a source-linked project brief, record approval where required, then resume in another session.
 
-**Start with [the personal alpha runbook and sprint plan](docs/PERSONAL_ALPHA.md).** The runnable entry point is `python -m apps.personal`. Open the sibling SEEM repository to maintain the context vault.
+## Run the personal alpha
+
+Clone [SEEM](https://github.com/ak23bar/SEEM) alongside this checkout so the directories are named `SAGE` and `SEEM`. From the SAGE root, run the following in PowerShell with `uv` installed.
+
+```powershell
+uv venv --python 3.12 .venv
+uv pip install --python .venv/Scripts/python.exe -e .
+.\.venv\Scripts\python.exe scripts/personal-smoke.py ../SEEM
+```
+
+The smoke test compiles a packet, requests approval, records a brief in a disposable SQLite database, and verifies that a fresh SEEM process can recover the run ID. It runs offline after setup. For a persistent local run or a live Claude proposal, follow the [personal alpha runbook](docs/PERSONAL_ALPHA.md). For a Claude Code session, start with [the repository instructions](CLAUDE.md).
 
 ## GPS / MOHID support application
 
@@ -10,7 +20,7 @@ A governed support automation platform that converts approved organizational kno
 decisions, routes uncertain cases to humans, and preserves a reconstructable audit record. MOHID V1 is the first
 reference implementation.
 
-## E01 bootstrap
+### E01 bootstrap
 
 Requirements: Python 3.12+, `venv`, and internet access to the configured Python package index on the first run.
 
@@ -25,7 +35,7 @@ After bootstrap, use `make check` for formatting, lint, strict typing, and all t
 running. Local PostgreSQL is optional for E01 and can be started with `make postgres-up`; E01 contains only an Alembic
 shell and no business migrations.
 
-## Repository boundaries
+### GPS / MOHID repository boundaries
 
 - `src/gps/domain/` owns strict, immutable, versioned provider-neutral contracts.
 - `src/gps/providers/` owns semantic protocols and side-effect-free local fakes.
