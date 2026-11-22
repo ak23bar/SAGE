@@ -1,4 +1,10 @@
-# Governed Support Platform
+# SAGE | Secure Agentic Governed Execution
+
+SAGE connects reviewed project context to a bounded task, a deterministic decision, an executor and a durable receipt. The personal alpha starts with one workflow: turn a SEEM packet into a source-linked project brief, record approval where required, then resume in another session.
+
+**Start with [the personal alpha runbook and sprint plan](docs/PERSONAL_ALPHA.md).** The runnable entry point is `python -m apps.personal`. Open the sibling SEEM repository to maintain the context vault.
+
+## GPS / MOHID support application
 
 A governed support automation platform that converts approved organizational knowledge into evidence-backed support
 decisions, routes uncertain cases to humans, and preserves a reconstructable audit record. MOHID V1 is the first

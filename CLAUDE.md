@@ -1,5 +1,9 @@
 # Claude Code Instructions
 
+## Choose the workstream
+
+For the SAGE personal control plane, read [the runbook](docs/PERSONAL_ALPHA.md), run its offline workflow, and pick up the first open acceptance gate. Use the project skill `sage-personal-run`. The personal implementation lives in `apps/personal/`. The instructions below govern the GPS / MOHID support implementation.
+
 **Project:** GPS / MOHID V1
 
 **Authority:** This file is a non-authoritative implementation derivative of:

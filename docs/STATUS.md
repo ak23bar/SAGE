@@ -6,29 +6,15 @@
 
 ## Current resumption state
 
-| Field | Current value |
+Reconciled with GitHub on November 21, 2026. Scope here is the GPS / MOHID workstream. See [the personal alpha](PERSONAL_ALPHA.md) for the SAGE and SEEM sprint.
+
+| Field | Evidence |
 | --- | --- |
-| Current package | Package A |
-| Current epic | E01 - Repository, CI, Domain Contracts, and Provider Fakes |
-| Current issue | [#2 - E01 Repository, CI, Domain Contracts, and Provider Fakes](https://github.com/ak23bar/governed-support-platform/issues/2) |
-| Current PR | [#6 - E01 Repository, CI, Domain Contracts, and Provider Fakes](https://github.com/ak23bar/governed-support-platform/pull/6) |
-| Current issue state | Final E01 candidate satisfies implementation and review requirements and is awaiting the final human merge gate; Issue #2 remains open and E01 is not yet accepted |
-| Current branch | `feat/e01-repository-ci-contracts-fakes` |
-| Repository status | E01 candidate includes the monorepo/tooling foundation, provider-neutral Pydantic contracts, derived readonly TypeScript declarations, semantic provider protocols/fakes, environment model, decision register/ADR template, local PostgreSQL/Alembic shell, CI, bootstrap, and explicit E02/E03 acceptance shells |
-| Architecture baseline | Platform v1.5 / MOHID v0.6 |
-| Last completed technical gate | All locally runnable E01 checks and the latest current-head GitHub Actions quality gates are green; PR #6 checks remain the authoritative automated record |
-| Current blockers | None before merge. Client-gated dependencies remain future-epic constraints and do not block E01 acceptance. |
-| Next immediate criterion | Akbar's explicit merge decision for PR #6 |
-| Next acceptance gate | Merge PR #6 only by Akbar's decision; do not begin E02 before E01 is accepted |
-| Authoritative CI state | GitHub Actions checks attached to the current PR #6 head; all required checks must remain green before merge |
-| After merge | E01 becomes accepted and [E02 Issue #3](https://github.com/ak23bar/governed-support-platform/issues/3) becomes the active implementation issue |
-
-## Active execution order
-
-1. Keep PR #6 on the dedicated E01 branch with all current-head GitHub Actions checks green.
-2. Await Akbar's explicit merge decision; do not mark E01 accepted before merge.
-3. Move [E02](https://github.com/ak23bar/governed-support-platform/issues/3) from Backlog to active implementation only after E01 is accepted and merged.
-4. Keep [E03](https://github.com/ak23bar/governed-support-platform/issues/4) in Backlog until its E01, E02, source-fixture, and approval dependencies are satisfied.
+| Last merged baseline | [PR #6](https://github.com/ak23bar/SAGE/pull/6) merged into main at `3b8e816`. [E01 #2](https://github.com/ak23bar/SAGE/issues/2) is closed. |
+| Next Package A issue | [E02 #3](https://github.com/ak23bar/SAGE/issues/3) is open. Deliver PostgreSQL persistence for cases, immutable runs and ordered audit with idempotent intake and concurrency checks. |
+| Following issue | [E03 #4](https://github.com/ak23bar/SAGE/issues/4) is open. Corpus publication depends on E02 and approved source fixtures. |
+| Implementation and review | Claude Code implements the bounded E02 issue. Codex reviews. Akbar decides merge. Select an E02 branch when starting that issue. |
+| Checks | GitHub Actions on the relevant PR is authoritative. Local personal-alpha tests exercise a separate workstream. |
 
 ## Client-gated dependencies
 
