@@ -1,5 +1,7 @@
 # Repository Instructions for Coding Agents
 
+For the personal SAGE workstream, start at [the personal alpha runbook](docs/PERSONAL_ALPHA.md). Its SQLite ledger and SEEM packet are scoped to the personal experiment. The remainder of this file governs GPS / MOHID, whose domain and persistence contracts continue to be defined by the living specifications.
+
 **Derived from:** Governed Support Automation Platform Living Reference v1.5 and MOHID Problem and First Implementation Living Specification v0.6
 
 **Authority:** This file is a non-authoritative implementation derivative. If it conflicts with either living PDF, the living PDFs control. Coding agents must not edit the frozen PDFs or treat this file as a third architecture document.
